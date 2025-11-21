@@ -1,12 +1,11 @@
-import { IsNumber, IsString } from 'class-validator';
+import { IsNumber, IsString, Min } from 'class-validator';
 
-export class Trips {
-  @IsNumber()
-  id: number;
+export class CreateTripDTO {
   @IsString()
   title: string;
   @IsString()
   region: string;
   @IsNumber()
+  @Min(1)
   price: number;
 }
