@@ -6,7 +6,7 @@ import { Trip } from '../trips.interface';
 export class TripsService {
   private trips: Trip[] = [];
 
-  public findall(): Trip[] {
+  public findAll(): Trip[] {
     return this.trips;
   }
 

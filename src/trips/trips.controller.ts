@@ -3,13 +3,13 @@ import { CreateTripDTO } from './create-trip.dto';
 import { TripsService } from './provider/trips.service';
 import { type Trip } from './trips.interface';
 
-@Controller('trips')
+@Controller()
 export class TripsController {
   constructor(private readonly tripsService: TripsService) {}
 
-  @Get('/trips')
-  getTrips() {
-    return this.tripsService.findall();
+  @Get()
+  getTrips(): Trip[] {
+    return this.tripsService.findAll();
   }
 
   @Post('/trips')
