@@ -1,0 +1,9 @@
+POST http://localhost:3000/trips
+Content-Type: application/json
+x-api-key: secret123
+
+{
+  "price":22,
+  "region":"Czech Republic",
+  "title": "Round tour through Czech Republic"
+}
